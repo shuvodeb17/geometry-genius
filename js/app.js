@@ -9,6 +9,6 @@ document
     inputValueSetText("triangle-value-one", triangleBaseInput);
     inputValueSetText("triangle-value-two", triangleHeightInput);
 
-    const triangleResult = (triangleBaseInput * triangleHeightInput) / 2;
-    console.log(triangleResult);
+    const triangleResult = 0.5 * triangleBaseInput * triangleHeightInput;
+    console.log(triangleResult)
   });

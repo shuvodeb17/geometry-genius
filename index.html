@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
+    <title>geometry genius</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Css File -->
     <link rel="stylesheet" href="css/style.css">
@@ -28,7 +28,7 @@
                 <!-- Triangle -->
                 <div id="triangle-card" class="col-lg-3 col-xl-3 col-xxl-3 col-md-6 col-12 col-sm-12">
                     <div class="card mb-3 p-2">
-                        <img src="images/triangle.png" class="card-img-top w-75 mx-auto" alt="triangle-image">
+                        <img src="images/triangle.png" class="card-img-top mx-auto" alt="triangle-image">
                         <div class="card-body">
                           <h5 class="card-title text-center mt-3">Triangle</h5>
                           <p class="triangle-formula-text text-center">
@@ -49,9 +49,141 @@
                 </div>
 
                 
+                <!-- Rectangle -->
+                <div id="card" class="col-lg-3 col-xl-3 col-xxl-3 col-md-6 col-12 col-sm-12">
+                    <div class="card mb-3 p-2">
+                        <img src="images/rectangle.png" class="card-img-top mx-auto" alt="rectangle-image">
+                        <div class="card-body">
+                          <h5 class="card-title text-center mt-3">Rectangle</h5>
+                          <p class="rectangle-formula-text text-center">
+                            Area (A) = w * I
+                          </p>
+                          <p id="show-input-value" class="lead text-center fw-bold">
+                            w=<span id="rectangle-value-one">0</span>cm, l=<span id="rectangle-value-two">0</span>cm
+                          </p>
+                          <div id="input-fields" class="d-flex justify-content-end align-items-center">
+                            <input type="text" class="form-control" id="rectangle-base-input" placeholder="w">
+                            cm
+                            <input type="text" class="form-control" id="rectangle-height-input" placeholder="l">
+                            cm
+                          </div>
+                          <button id="rectangle-calculate-btn" class="btn btn-primary w-100 mt-3">Calculate</button>
+                        </div>
+                      </div>
+                </div>
+
+
+                 <!-- Parallelogram -->
+                 <div id="card" class="col-lg-3 col-xl-3 col-xxl-3 col-md-6 col-12 col-sm-12">
+                    <div class="card mb-3 p-2">
+                        <img src="images/parallelogram.png" class="card-img-top mx-auto" alt="parallelogram-image">
+                        <div class="card-body">
+                          <h5 class="card-title text-center mt-3">parallelogram</h5>
+                          <p class="parallelogram-formula-text text-center">
+                            Area (A) = b * h
+                          </p>
+                          <p id="show-input-value" class="lead text-center fw-bold">
+                            b=<span id="parallelogram-value-one">0</span>cm, h=<span id="parallelogram-value-two">0</span>cm
+                          </p>
+                          <div id="input-fields" class="d-flex justify-content-end align-items-center">
+                            <input type="text" class="form-control" id="parallelogram-base-input" placeholder="w">
+                            cm
+                            <input type="text" class="form-control" id="parallelogram-height-input" placeholder="l">
+                            cm
+                          </div>
+                          <button id="parallelogram-calculate-btn" class="btn btn-primary w-100 mt-3">Calculate</button>
+                        </div>
+                      </div>
+                </div>
+
+                
+                <!-- Area Calculation -->
+                <div id="area-calculation" class="col-lg-3 col-xl-3 col-xxl-3 col-md-6 col-12 col-sm-12">
+                    <div class="card">
+                        <div class="card-body">
+                          <h5 class="card-title">Area Calculation</h5>
+                        </div>
+                      </div>
+                </div>
+
+
+                <!-- Rhombus -->
+                <div id="card" class="col-lg-3 col-xl-3 col-xxl-3 col-md-6 col-12 col-sm-12">
+                    <div class="card mb-3 p-2">
+                        <img src="images/rhombus.png" class="card-img-top mx-auto" alt="rhombus-image">
+                        <div class="card-body">
+                          <h5 class="card-title text-center mt-3">Rhombus</h5>
+                          <p class="rhombus-formula-text text-center">
+                            Area (A) = 0.5 * d<sub>1</sub> * d<sub>2</sub>
+                          </p>
+                          <p id="show-input-value" class="lead text-center fw-bold">
+                            d<sub>1</sub>=<span id="rhombus-value-one">0</span>cm, d<sub>2</sub>=<span id="rhombus-value-two">0</span>cm
+                          </p>
+                          <div id="input-fields" class="d-flex justify-content-end align-items-center">
+                            <input type="text" class="form-control" id="rhombus-base-input" placeholder="d1">
+                            cm
+                            <input type="text" class="form-control" id="rhombus-height-input" placeholder="d2">
+                            cm
+                          </div>
+                          <button id="rhombus-calculate-btn" class="btn btn-primary w-100 mt-3">Calculate</button>
+                        </div>
+                      </div>
+                </div>
+
+
+                <!-- Pentagon -->
+                <div id="card" class="col-lg-3 col-xl-3 col-xxl-3 col-md-6 col-12 col-sm-12">
+                  <div class="card mb-3 p-2">
+                      <img src="images/pentagon.png" class="card-img-top mx-auto" alt="pentagon-image">
+                      <div class="card-body">
+                        <h5 class="card-title text-center mt-3">Pentagon</h5>
+                        <p class="pentagon-formula-text text-center">
+                          Area (A) = 0.5 * p * b
+                        </p>
+                        <p id="show-input-value" class="lead text-center fw-bold">
+                          p=<span id="pentagon-value-one">0</span>cm, b=<span id="pentagon-value-two">0</span>cm
+                        </p>
+                        <div id="input-fields" class="d-flex justify-content-end align-items-center">
+                          <input type="text" class="form-control" id="pentagon-base-input" placeholder="p">
+                          cm
+                          <input type="text" class="form-control" id="pentagon-height-input" placeholder="b">
+                          cm
+                        </div>
+                        <button id="pentagon-calculate-btn" class="btn btn-primary w-100 mt-3">Calculate</button>
+                      </div>
+                    </div>
+              </div>
+                
+
+              <!-- Ellipse -->
+              <div id="card" class="col-lg-3 col-xl-3 col-xxl-3 col-md-6 col-12 col-sm-12">
+                <div class="card mb-3 p-2">
+                    <img src="images/ellipse.png" class="card-img-top mx-auto" alt="ellipse-image">
+                    <div class="card-body">
+                      <h5 class="card-title text-center mt-3">Ellipse</h5>
+                      <p class="ellipse-formula-text text-center">
+                        Area (A) = πab
+                      </p>
+                      <p id="show-input-value" class="lead text-center fw-bold">
+                        a=<span id="ellipse-value-one">0</span>cm, b=<span id="ellipse-value-two">0</span>cm
+                      </p>
+                      <div id="input-fields" class="d-flex justify-content-end align-items-center">
+                        <input type="text" class="form-control" id="ellipse-base-input" placeholder="a">
+                        cm
+                        <input type="text" class="form-control" id="ellipse-height-input" placeholder="b">
+                        cm
+                      </div>
+                      <button id="ellipse-calculate-btn" class="btn btn-primary w-100 mt-3">Calculate</button>
+                    </div>
+                  </div>
+            </div>
+
+
+                
             </div>
         </div>
     </main>
+    
 
 
 
