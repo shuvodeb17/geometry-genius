@@ -204,3 +204,31 @@ document
     // show result area calculation
     showResultAreaCalculation("order-list", "div", "Ellipse", ellipseResult);
   });
+
+
+  
+
+//   random color
+document.getElementById('triangle-card').addEventListener("mouseenter", function(){
+    document.getElementById('triangle-card').style.backgroundColor = randomColor();
+  });
+
+document.getElementById('rectangle-card').addEventListener("mouseenter", function(){
+    document.getElementById('rectangle-card').style.backgroundColor = randomColor();
+  });
+
+document.getElementById('parallelogram-card').addEventListener("mouseenter", function(){
+    document.getElementById('parallelogram-card').style.backgroundColor = randomColor();
+  });
+
+document.getElementById('rhombus-card').addEventListener("mouseenter", function(){
+    document.getElementById('rhombus-card').style.backgroundColor = randomColor();
+  });
+
+document.getElementById('pentagon-card').addEventListener("mouseenter", function(){
+    document.getElementById('pentagon-card').style.backgroundColor = randomColor();
+  });
+
+document.getElementById('ellipse-card').addEventListener("mouseenter", function(){
+    document.getElementById('ellipse-card').style.backgroundColor = randomColor();
+  });
