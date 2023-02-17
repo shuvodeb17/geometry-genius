@@ -157,3 +157,47 @@ document
       rhombusResult
     );
   });
+
+
+
+// pentagon
+document
+  .getElementById("pentagon-calculate-btn")
+  .addEventListener("click", function () {
+    // get input field value
+    const pentagonPInput = getInputValue("pentagon-p-input");
+    const pentagonBInput = getInputValue(
+      "pentagon-b-input"
+    );
+
+    let pentagonResult;
+    if (
+      inputFieldValueLength("pentagon-p-input") === 0 ||
+      inputFieldValueLength("pentagon-b-input") === 0
+    ) {
+      alert("input field empty");
+      return;
+    } else if (
+      isNaN(pentagonPInput) ||
+      isNaN(pentagonBInput)
+    ) {
+      alert("Please enter number");
+    } else if (pentagonPInput < 0 || pentagonBInput < 0) {
+      alert("Please enter positive number");
+    } else {
+      // calculate
+      pentagonResult = 0.5 * pentagonPInput * pentagonBInput;
+
+      // input value set on the element
+      setInnerText("pentagon-value-one", pentagonPInput);
+      setInnerText("pentagon-value-two", pentagonBInput);
+    }
+
+    // show result area calculation
+    showResultAreaCalculation(
+      "order-list",
+      "div",
+      "Pentagon",
+      pentagonResult
+    );
+  });
