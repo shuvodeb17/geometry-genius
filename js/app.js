@@ -30,8 +30,6 @@ document
     showResultAreaCalculation("order-list", "div", "Triangle", triangleResult);
   });
 
-
-
 // Rectangle
 document
   .getElementById("rectangle-calculate-btn")
@@ -68,8 +66,6 @@ document
       rectangleResult
     );
   });
-
-
 
 // parallelogram
 document
@@ -113,18 +109,13 @@ document
     );
   });
 
-
-
-
 // Rhombus
 document
   .getElementById("rhombus-calculate-btn")
   .addEventListener("click", function () {
     // get input field value
     const rhombusDOneInput = getInputValue("rhombus-d-one-input");
-    const rhombusDTwoInput = getInputValue(
-      "rhombus-d-two-input"
-    );
+    const rhombusDTwoInput = getInputValue("rhombus-d-two-input");
 
     let rhombusResult;
     if (
@@ -133,10 +124,7 @@ document
     ) {
       alert("input field empty");
       return;
-    } else if (
-      isNaN(rhombusDOneInput) ||
-      isNaN(rhombusDTwoInput)
-    ) {
+    } else if (isNaN(rhombusDOneInput) || isNaN(rhombusDTwoInput)) {
       alert("Please enter number");
     } else if (rhombusDOneInput < 0 || rhombusDTwoInput < 0) {
       alert("Please enter positive number");
@@ -150,15 +138,8 @@ document
     }
 
     // show result area calculation
-    showResultAreaCalculation(
-      "order-list",
-      "div",
-      "Rhombus",
-      rhombusResult
-    );
+    showResultAreaCalculation("order-list", "div", "Rhombus", rhombusResult);
   });
-
-
 
 // pentagon
 document
@@ -166,9 +147,7 @@ document
   .addEventListener("click", function () {
     // get input field value
     const pentagonPInput = getInputValue("pentagon-p-input");
-    const pentagonBInput = getInputValue(
-      "pentagon-b-input"
-    );
+    const pentagonBInput = getInputValue("pentagon-b-input");
 
     let pentagonResult;
     if (
@@ -177,10 +156,7 @@ document
     ) {
       alert("input field empty");
       return;
-    } else if (
-      isNaN(pentagonPInput) ||
-      isNaN(pentagonBInput)
-    ) {
+    } else if (isNaN(pentagonPInput) || isNaN(pentagonBInput)) {
       alert("Please enter number");
     } else if (pentagonPInput < 0 || pentagonBInput < 0) {
       alert("Please enter positive number");
@@ -194,10 +170,37 @@ document
     }
 
     // show result area calculation
-    showResultAreaCalculation(
-      "order-list",
-      "div",
-      "Pentagon",
-      pentagonResult
-    );
+    showResultAreaCalculation("order-list", "div", "Pentagon", pentagonResult);
+  });
+
+// Ellipse
+document
+  .getElementById("ellipse-calculate-btn")
+  .addEventListener("click", function () {
+    // get input field value
+    const ellipseInputOne = getInputValue("ellipse-input-one");
+    const ellipseInputTwo = getInputValue("ellipse-input-two");
+
+    let ellipseResult;
+    if (
+      inputFieldValueLength("ellipse-input-one") === 0 ||
+      inputFieldValueLength("ellipse-input-two") === 0
+    ) {
+      alert("input field empty");
+      return;
+    } else if (isNaN(ellipseInputOne) || isNaN(ellipseInputTwo)) {
+      alert("Please enter number");
+    } else if (ellipseInputOne < 0 || ellipseInputTwo < 0) {
+      alert("Please enter positive number");
+    } else {
+      // calculate
+      ellipseResult = Math.PI * ellipseInputOne * ellipseInputTwo;
+
+      // input value set on the element
+      setInnerText("ellipse-value-one", ellipseInputOne);
+      setInnerText("ellipse-value-two", ellipseInputTwo);
+    }
+
+    // show result area calculation
+    showResultAreaCalculation("order-list", "div", "Ellipse", ellipseResult);
   });
