@@ -2,7 +2,6 @@
 document
   .getElementById("triangle-calculate-btn")
   .addEventListener("click", function () {
-    
     // get input field value
     const triangleBaseInput = getInputValue("triangle-base-input");
     const triangleHeightInput = getInputValue("triangle-height-input");
@@ -37,7 +36,6 @@ document
 document
   .getElementById("rectangle-calculate-btn")
   .addEventListener("click", function () {
-
     // get input field value
     const rectangleWidthInput = getInputValue("rectangle-width-input");
     const rectangleLengthInput = getInputValue("rectangle-length-input");
@@ -63,5 +61,99 @@ document
     }
 
     // show result area calculation
-    showResultAreaCalculation("order-list", "div", "Rectangle", rectangleResult);
+    showResultAreaCalculation(
+      "order-list",
+      "div",
+      "Rectangle",
+      rectangleResult
+    );
+  });
+
+
+
+// parallelogram
+document
+  .getElementById("parallelogram-calculate-btn")
+  .addEventListener("click", function () {
+    // get input field value
+    const parallelogramBaseInput = getInputValue("parallelogram-base-input");
+    const parallelogramHeightInput = getInputValue(
+      "parallelogram-height-input"
+    );
+
+    let parallelogramResult;
+    if (
+      inputFieldValueLength("parallelogram-base-input") === 0 ||
+      inputFieldValueLength("parallelogram-height-input") === 0
+    ) {
+      alert("input field empty");
+      return;
+    } else if (
+      isNaN(parallelogramBaseInput) ||
+      isNaN(parallelogramHeightInput)
+    ) {
+      alert("Please enter number");
+    } else if (parallelogramBaseInput < 0 || parallelogramHeightInput < 0) {
+      alert("Please enter positive number");
+    } else {
+      // calculate
+      parallelogramResult = parallelogramBaseInput * parallelogramHeightInput;
+
+      // input value set on the element
+      setInnerText("parallelogram-value-one", parallelogramBaseInput);
+      setInnerText("parallelogram-value-two", parallelogramHeightInput);
+    }
+
+    // show result area calculation
+    showResultAreaCalculation(
+      "order-list",
+      "div",
+      "Parallelogram",
+      parallelogramResult
+    );
+  });
+
+
+
+
+// Rhombus
+document
+  .getElementById("rhombus-calculate-btn")
+  .addEventListener("click", function () {
+    // get input field value
+    const rhombusDOneInput = getInputValue("rhombus-d-one-input");
+    const rhombusDTwoInput = getInputValue(
+      "rhombus-d-two-input"
+    );
+
+    let rhombusResult;
+    if (
+      inputFieldValueLength("rhombus-d-one-input") === 0 ||
+      inputFieldValueLength("rhombus-d-two-input") === 0
+    ) {
+      alert("input field empty");
+      return;
+    } else if (
+      isNaN(rhombusDOneInput) ||
+      isNaN(rhombusDTwoInput)
+    ) {
+      alert("Please enter number");
+    } else if (rhombusDOneInput < 0 || rhombusDTwoInput < 0) {
+      alert("Please enter positive number");
+    } else {
+      // calculate
+      rhombusResult = 0.5 * rhombusDOneInput * rhombusDTwoInput;
+
+      // input value set on the element
+      setInnerText("rhombus-value-one", rhombusDOneInput);
+      setInnerText("rhombus-value-two", rhombusDTwoInput);
+    }
+
+    // show result area calculation
+    showResultAreaCalculation(
+      "order-list",
+      "div",
+      "Rhombus",
+      rhombusResult
+    );
   });
