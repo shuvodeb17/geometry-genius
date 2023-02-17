@@ -3,6 +3,11 @@
   padding: 0;
   box-sizing: border-box;
 }
-.card img{
-    height: 10rem;
+.card img {
+  height: 10rem;
+}
+.ol-child {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: 10px;
 }
