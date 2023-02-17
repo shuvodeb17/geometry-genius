@@ -30,3 +30,38 @@ document
     // show result area calculation
     showResultAreaCalculation("order-list", "div", "Triangle", triangleResult);
   });
+
+
+
+// Rectangle
+document
+  .getElementById("rectangle-calculate-btn")
+  .addEventListener("click", function () {
+
+    // get input field value
+    const rectangleWidthInput = getInputValue("rectangle-width-input");
+    const rectangleLengthInput = getInputValue("rectangle-length-input");
+
+    let triangleResult;
+    if (
+      inputFieldValueLength("rectangle-width-input") === 0 ||
+      inputFieldValueLength("rectangle-length-input") === 0
+    ) {
+      alert("input field empty");
+      return;
+    } else if (isNaN(rectangleWidthInput) || isNaN(rectangleLengthInput)) {
+      alert("Please enter number");
+    } else if (rectangleWidthInput < 0 || rectangleLengthInput < 0) {
+      alert("Please enter positive number");
+    } else {
+      // calculate
+      triangleResult = rectangleWidthInput * rectangleLengthInput;
+
+      // input value set on the element
+      setInnerText("triangle-value-one", rectangleWidthInput);
+      setInnerText("triangle-value-two", rectangleLengthInput);
+    }
+
+    // show result area calculation
+    showResultAreaCalculation("order-list", "div", "Triangle", triangleResult);
+  });
