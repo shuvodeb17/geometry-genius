@@ -31,12 +31,11 @@
                         <img src="images/triangle.png" class="card-img-top mx-auto" alt="triangle-image">
                         <div class="card-body">
                           <h5 class="card-title text-center mt-3">Triangle</h5>
+                          
                           <p class="triangle-formula-text text-center">
-                            Area (A) = 0.5 * b * h
+                            Area (A) = 0.5 * <span id="triangle-value-one">b</span> * <span id="triangle-value-two">h</span>
                           </p>
-                          <p id="show-input-value" class="lead text-center fw-bold">
-                            b=<span id="triangle-value-one">0</span>cm, h=<span id="triangle-value-two">0</span>cm
-                          </p>
+
                           <div id="input-fields" class="d-flex justify-content-end align-items-center">
                             <input type="text" class="form-control" id="triangle-base-input" placeholder="b">
                             cm
@@ -55,12 +54,11 @@
                         <img src="images/rectangle.png" class="card-img-top mx-auto" alt="rectangle-image">
                         <div class="card-body">
                           <h5 class="card-title text-center mt-3">Rectangle</h5>
+
                           <p class="rectangle-formula-text text-center">
-                            Area (A) = w * I
+                            Area (A) = <span id="rectangle-value-one">w</span> * <span id="rectangle-value-two">l</span>
                           </p>
-                          <p id="show-input-value" class="lead text-center fw-bold">
-                            w=<span id="rectangle-value-one">0</span>cm, l=<span id="rectangle-value-two">0</span>cm
-                          </p>
+
                           <div id="input-fields" class="d-flex justify-content-end align-items-center">
                             <input type="text" class="form-control" id="rectangle-width-input" placeholder="w">
                             cm
@@ -79,12 +77,11 @@
                         <img src="images/parallelogram.png" class="card-img-top mx-auto" alt="parallelogram-image">
                         <div class="card-body">
                           <h5 class="card-title text-center mt-3">Parallelogram</h5>
+
                           <p class="parallelogram-formula-text text-center">
-                            Area (A) = b * h
+                            Area (A) = <span id="parallelogram-value-one">b</span> * <span id="parallelogram-value-two">h</span>
                           </p>
-                          <p id="show-input-value" class="lead text-center fw-bold">
-                            b=<span id="parallelogram-value-one">0</span>cm, h=<span id="parallelogram-value-two">0</span>cm
-                          </p>
+
                           <div id="input-fields" class="d-flex justify-content-end align-items-center">
                             <input type="text" class="form-control" id="parallelogram-base-input" placeholder="b">
                             cm
@@ -100,7 +97,7 @@
                 <!-- Area Calculation -->
                 <div id="area-calculation" class="col-lg-3 col-xl-3 col-xxl-3 col-md-6 col-12 col-sm-12">
                     <div class="card" id="area-calculation">
-                        <div class="card-body">
+                        <div class="card-body" id="area">
                           <h5 class="card-title text-center text-decoration-underline">Area Calculation</h5>
 
                           <div class="add-items">
@@ -120,12 +117,11 @@
                         <img src="images/rhombus.png" class="card-img-top mx-auto" alt="rhombus-image">
                         <div class="card-body">
                           <h5 class="card-title text-center mt-3">Rhombus</h5>
+
                           <p class="rhombus-formula-text text-center">
-                            Area (A) = 0.5 * d<sub>1</sub> * d<sub>2</sub>
+                            Area (A) = 0.5 * <span id="rhombus-value-one">d<sub>1</sub></span> * <span id="rhombus-value-two">d<sub>2</sub></span>
                           </p>
-                          <p id="show-input-value" class="lead text-center fw-bold">
-                            d<sub>1</sub>=<span id="rhombus-value-one">0</span>cm, d<sub>2</sub>=<span id="rhombus-value-two">0</span>cm
-                          </p>
+
                           <div id="input-fields" class="d-flex justify-content-end align-items-center">
                             <input type="text" class="form-control" id="rhombus-d-one-input" placeholder="d1">
                             cm
@@ -144,12 +140,11 @@
                       <img src="images/pentagon.png" class="card-img-top mx-auto" alt="pentagon-image">
                       <div class="card-body">
                         <h5 class="card-title text-center mt-3">Pentagon</h5>
+                        
                         <p class="pentagon-formula-text text-center">
-                          Area (A) = 0.5 * p * b
+                          Area (A) = 0.5 * <span id="pentagon-value-one">p</span> * <span id="pentagon-value-two">b</span>
                         </p>
-                        <p id="show-input-value" class="lead text-center fw-bold">
-                          p=<span id="pentagon-value-one">0</span>cm, b=<span id="pentagon-value-two">0</span>cm
-                        </p>
+
                         <div id="input-fields" class="d-flex justify-content-end align-items-center">
                           <input type="text" class="form-control" id="pentagon-p-input" placeholder="p">
                           cm
@@ -168,12 +163,11 @@
                     <img src="images/ellipse.png" class="card-img-top mx-auto" alt="ellipse-image">
                     <div class="card-body">
                       <h5 class="card-title text-center mt-3">Ellipse</h5>
+
                       <p class="ellipse-formula-text text-center">
-                        Area (A) = πab
+                        Area (A) = π<span id="ellipse-value-one">a</span><span id="ellipse-value-two">b</span>
                       </p>
-                      <p id="show-input-value" class="lead text-center fw-bold">
-                        a=<span id="ellipse-value-one">0</span>cm, b=<span id="ellipse-value-two">0</span>cm
-                      </p>
+
                       <div id="input-fields" class="d-flex justify-content-end align-items-center">
                         <input type="text" class="form-control" id="ellipse-input-one" placeholder="a">
                         cm

@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 .card {
-    cursor: pointer;
+  cursor: pointer;
 }
 .card img {
   height: 10rem;
@@ -13,4 +13,10 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 10px;
+}
+div#area {
+  padding: 18px 0px;
+}
+#area-btn {
+  font-size: 10px;
 }

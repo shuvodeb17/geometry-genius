@@ -1,3 +1,9 @@
+//   blog file
+document.getElementById('blog-btn').addEventListener('click', function () {
+    window.location.href = '../blog.html'
+})
+
+
 // triangle
 document
   .getElementById("triangle-calculate-btn")
@@ -194,7 +200,7 @@ document
       alert("Please enter positive number");
     } else {
       // calculate
-      ellipseResult = Math.PI * ellipseInputOne * ellipseInputTwo;
+      ellipseResult = 3.14 * ellipseInputOne * ellipseInputTwo;
 
       // input value set on the element
       setInnerText("ellipse-value-one", ellipseInputOne);
@@ -206,7 +212,7 @@ document
   });
 
 
-  
+
 
 //   random color
 document.getElementById('triangle-card').addEventListener("mouseenter", function(){
