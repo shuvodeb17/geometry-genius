@@ -42,7 +42,7 @@ document
     const rectangleWidthInput = getInputValue("rectangle-width-input");
     const rectangleLengthInput = getInputValue("rectangle-length-input");
 
-    let triangleResult;
+    let rectangleResult;
     if (
       inputFieldValueLength("rectangle-width-input") === 0 ||
       inputFieldValueLength("rectangle-length-input") === 0
@@ -55,13 +55,13 @@ document
       alert("Please enter positive number");
     } else {
       // calculate
-      triangleResult = rectangleWidthInput * rectangleLengthInput;
+      rectangleResult = rectangleWidthInput * rectangleLengthInput;
 
       // input value set on the element
-      setInnerText("triangle-value-one", rectangleWidthInput);
-      setInnerText("triangle-value-two", rectangleLengthInput);
+      setInnerText("rectangle-value-one", rectangleWidthInput);
+      setInnerText("rectangle-value-two", rectangleLengthInput);
     }
 
     // show result area calculation
-    showResultAreaCalculation("order-list", "div", "Triangle", triangleResult);
+    showResultAreaCalculation("order-list", "div", "Rectangle", rectangleResult);
   });
