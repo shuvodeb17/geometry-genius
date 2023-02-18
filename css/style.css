@@ -13,10 +13,21 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   margin-bottom: 10px;
+  gap: 30px;
 }
 div#area {
   padding: 18px 0px;
 }
 #area-btn {
-  font-size: 10px;
+    font-size: 10px;
+    width: 145%;
+}
+div#area-calculation {
+    overflow: scroll;
+}
+ol#order-list {
+    padding: 0px 1px 2px 13px;
+}
+li {
+  font-size: 13px;
 }
